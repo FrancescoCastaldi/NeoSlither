@@ -1,8 +1,16 @@
 package com.NeoSlither;
 
 public class Game {
+    private gamePanel panel;
     public Game() {
-        panel = new Panel();
-        window = new Window(panel);
+        panel = new gamePanel();
+        panel.start();
+
+    }
+
+        public void start() {
+            window.run();
+
+        }
     }
 }
