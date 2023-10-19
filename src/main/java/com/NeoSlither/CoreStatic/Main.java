@@ -1,10 +1,10 @@
-package com.NeoSlither;
+package com.NeoSlither.CoreStatic;
 
 public class Main {
     public static void main(String[] args) {
 
         Game game = new Game();
-        game.start();
+        game.run();
 
     }
 }
