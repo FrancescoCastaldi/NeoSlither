@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6497b567-6587-4740-be0c-6bb55c8cdefc" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/InputHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Logo.java" afterDir="false" />
@@ -16,6 +17,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/GameSettings.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="6497b567-6587-4740-be0c-6bb55c8cdefc" name="Changes" comment="" />
+>>>>>>> 239905a6afefc5830305eecb24ee5cd77281db85
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,9 +52,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -77,6 +78,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
+<<<<<<< HEAD
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -87,12 +89,45 @@
     <configuration name="NeoSlither" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+=======
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.NeoSlither" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Unnamed">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+>>>>>>> 239905a6afefc5830305eecb24ee5cd77281db85
       <option name="MAIN_CLASS_NAME" value="com.NeoSlither.CoreStatic.Main" />
-      <module name="NeoSlither.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NeoSlither" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Gradle.NeoSlither" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,6 +140,7 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -131,4 +167,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NeoSlither$NeoSlither.ic" NAME="NeoSlither Coverage Results" MODIFIED="1697752032117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+=======
+>>>>>>> 239905a6afefc5830305eecb24ee5cd77281db85
 </project>
