@@ -2,23 +2,20 @@ package com.NeoSlither.Core.UI;
 import com.NeoSlither.Utilities.GameSettings;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Window extends JFrame {
-    private final GameSettings settings = new GameSettings();
+    GameSettings settings = new GameSettings();
 
     public Window(Panel gamePanel) {
         this.setTitle(settings.gameTitle);
-        this.setResizable(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
         this.add(gamePanel);
-        this.pack();
+        this.pack(); //the size of game becomes the size of the window
         this.setSize(settings.screenWidth, settings.screenHeight);
-        this.setVisible(true);
+        this.setResizable(true);
         this.setLocationRelativeTo(null);
-
-        gamePanel.start();
-
+        this.setVisible(true);
     }
+
 }
