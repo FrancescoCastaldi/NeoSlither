@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4648d87-4742-42ab-837e-043fe6c04c8a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Window.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Logo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +21,29 @@
       </list>
     </option>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "master"
-  }
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
 }]]></component>
+  <component name="ProjectId" id="2XDppncN496UYsDWLjTKtW1jzC5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.NeoSlither.CoreStatic" />
@@ -46,6 +60,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <servers />
   </component>

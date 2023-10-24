@@ -50,9 +50,9 @@ public class Panel {
         g2.drawRect(left_x-4,top_y-4,w+8,h+8);
 
         int x = right_x+100;
-        int y=bottom_y-200;
-        g2.drawRect(x,y,200,200);
-        g2.setFont(new Font("Arial",Font.BOLD,20));
+        int y=bottom_y-300;
+        g2.drawRect(x,y,200,300);
+        g2.setFont(new Font("Times New Roman",Font.BOLD,30));
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.drawString("NEXT", x+60,y+60);
 
