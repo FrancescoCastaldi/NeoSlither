@@ -26,6 +26,11 @@ public class Tetris {
 
     }
     public void draw(Graphics2D g2){
-
+        int m=2;
+        g2.setColor(b[0].c);
+        g2.fillRect(b[0].x+m,b[0].y+m,Block.size-m*2,Block.size-m*2);
+        g2.fillRect(b[1].x+m,b[1].y+m,Block.size-m*2,Block.size-m*2);
+        g2.fillRect(b[2].x+m,b[2].y+m,Block.size-m*2,Block.size-m*2);
+        g2.fillRect(b[3].x+m,b[3].y+m,Block.size-m*2,Block.size-m*2);
     }
 }
