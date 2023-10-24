@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4648d87-4742-42ab-837e-043fe6c04c8a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Window.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Logo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.NeoSlither.CoreStatic" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestTetris" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="jbr-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.NeoSlither.CoreStatic.Main" />
+      <module name="NeoSlither.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

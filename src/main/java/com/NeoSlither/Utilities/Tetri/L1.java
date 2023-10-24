@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class L1 extends Tetris{
     public L1(){
-        Creation(Color.red);
+        create(Color.orange);
     }
     public void setXY(int x,int y){
         // 0

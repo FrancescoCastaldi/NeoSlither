@@ -1,19 +1,21 @@
 package com.NeoSlither.Utilities.Tetri;
-
 import java.awt.Color;
-
 import java.awt.*;
+import static com.NeoSlither.Core.UI.Panel.dropInterval;
 
 public class Tetris {
     public Block b[]=new Block[4];
     public Block tempB[]=new Block[4];
-    public void Creation(Color c){
-        for(int i=0;i<4;i++){
-            b[i]=new Block(c);
-        }
-        for (int i=0;i<4;i++){
-            tempB[i]=new Block(c);
-        }
+    int autoDropcounter=0;
+    public void create(Color c){
+        b[0]=new Block(c);
+        b[1]=new Block(c);
+        b[2]=new Block(c);
+        b[3]=new Block(c);
+        tempB[0]=new Block(c);
+        tempB[1]=new Block(c);
+        tempB[2]=new Block(c);
+        tempB[3]=new Block(c);
     }
 
     public void setXY(int x,int y){
@@ -23,7 +25,15 @@ public class Tetris {
 
     }
     public void update(){
+        autoDropcounter++;
+        if(autoDropcounter==dropInterval){
+            b[0].y+= Block.size;
+            b[1].y+= Block.size;
+            b[2].y+= Block.size;
+            b[3].y+= Block.size;
+            autoDropcounter=0;
 
+        }
     }
     public void draw(Graphics2D g2){
         int m=2;

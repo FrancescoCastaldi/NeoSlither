@@ -1,53 +1,60 @@
 package com.NeoSlither.CoreStatic;
-
 import com.NeoSlither.Utilities.GameSettings;
 import com.NeoSlither.Core.UI.Panel;
-import com.NeoSlither.Core.UI.Window;
+import javax.swing.JFrame;
 
-import javax.swing.*;
+import java.awt.*;
+import javax.swing.JPanel;
+
 
 public class Game extends JPanel implements Runnable {
-    private final GameSettings settings = new GameSettings();
-    double drawInterval = 1000000000.0 / settings.fps;
-    public static final int width=1280;
-    public static final int height=720;
-    private final Panel panel;
-    private final Window window;
-    private Thread gameThread;
-    private long currentTime;
-    private double deltaTime;
+    public static final int width = 1280;
+    public static final int height = 720;
 
-    private long previous=System.nanoTime();
+    Thread gameThread;
+    Panel gamePanel;
 
-    public Game() {
-        panel = new Panel();
-        window = new Window(panel);
 
+    public  Game(){
+        this.setPreferredSize(new Dimension(width,height));
+        this.setBackground(Color.black);
+        this.setLayout(null);
+        gamePanel = new Panel();
 
     }
+    public void launchGame(){
 
-    public void start() {
         gameThread = new Thread(this);
         gameThread.start();
     }
 
+
     public void run() {
-    //basic game loop
-        while (gameThread != null) {
+        long lastTime = System.nanoTime();
+        double drawInterval = (double) 1000000000 / 60;
+        double delta = 0;
+        long currentTime;
+        while(gameThread != null) {
             currentTime = System.nanoTime();
-            deltaTime = (currentTime - previous) / drawInterval;
-            previous = currentTime;
-            if(deltaTime >= 1) {
-                updateGame();
-                repaint(); //repaint paints the panel
-                deltaTime--;
+            delta += (currentTime - lastTime) / drawInterval;
+            lastTime = currentTime;
+            if (delta >= 1) {
+                update();
+                repaint();
+                delta--;
             }
         }
-    }
 
-    private void updateGame() {
-        panel.update();
     }
+    private void update(){
+        gamePanel.update();
 
+
+    }
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+        gamePanel.draw(g2);
+    }
 }
 
