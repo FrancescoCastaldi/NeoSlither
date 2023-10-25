@@ -19,6 +19,8 @@ public class Game extends JPanel implements Runnable {
         this.setPreferredSize(new Dimension(width,height));
         this.setBackground(Color.black);
         this.setLayout(null);
+        this.addKeyListener(new InputHandler());
+        this.setFocusable(true);
         gamePanel = new Panel();
 
     }
