@@ -49,7 +49,9 @@ public class Game extends JPanel implements Runnable {
 
     }
     private void update(){
-        gamePanel.update();
+        if(InputHandler.pausePressed==false)
+            gamePanel.update();
+
 
 
     }

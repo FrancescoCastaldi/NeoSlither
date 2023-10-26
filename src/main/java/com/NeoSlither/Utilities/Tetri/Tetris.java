@@ -5,12 +5,18 @@ import com.NeoSlither.CoreStatic.InputHandler;
 import java.awt.Color;
 import java.awt.*;
 import static com.NeoSlither.Core.UI.Panel.dropInterval;
+import  com.NeoSlither.Core.UI.Panel;
+
 
 public class Tetris {
     public Block b[]=new Block[4];
     public Block tempB[]=new Block[4];
     int autoDropCounter =0;
     public int direction=1; //4 directions
+    boolean sxCollision;
+    boolean dxCollision;
+    boolean bottomCollision;
+    public boolean active=true;
 
 
     public void create(Color c){
@@ -28,16 +34,22 @@ public class Tetris {
 
     }
     public void updateXY(int direction){
-       this.direction=direction;
-       //tempB useful for handle collision (restore collision)
-       b[0].x=tempB[0].x;
-       b[0].y=tempB[0].y;
-       b[1].x=tempB[1].x;
-       b[1].y=tempB[1].y;
-       b[2].x=tempB[2].x;
-       b[2].y=tempB[2].y;
-       b[3].x=tempB[3].x;
-       b[3].y=tempB[3].y;
+        checkMovementRotationCollision();
+
+        if(sxCollision == false && dxCollision == false && bottomCollision == false) {
+
+
+            this.direction = direction;
+            //tempB useful for handle collision (restore collision)
+            b[0].x = tempB[0].x;
+            b[0].y = tempB[0].y;
+            b[1].x = tempB[1].x;
+            b[1].y = tempB[1].y;
+            b[2].x = tempB[2].x;
+            b[2].y = tempB[2].y;
+            b[3].x = tempB[3].x;
+            b[3].y = tempB[3].y;
+        }
 
 
     }
@@ -53,6 +65,84 @@ public class Tetris {
     public void getDirection4(){
 
     }
+    public void checkMovementCollision() {
+        sxCollision = false;
+        dxCollision = false;
+        bottomCollision = false;
+        checkStaticBlockCollision();
+        //left wall
+        for (int iterator = 0;iterator < b.length; iterator++){
+            if (b[iterator].x == Panel.left_x) {
+                sxCollision = true;
+            }
+        }
+        //right wall
+        for (int iterator = 0;iterator < b.length; iterator++){
+            if (b[iterator].x+Block.size == Panel.right_x) {
+                dxCollision = true;
+            }
+        }
+        //bottom wall
+        for(int iterator = 0;iterator < b.length; iterator++){
+            if (b[iterator].y+Block.size == Panel.bottom_y) {
+                bottomCollision = true;
+            }
+        }
+    }
+    public void checkMovementRotationCollision(){
+        sxCollision = false;
+        dxCollision = false;
+        bottomCollision = false;
+        checkStaticBlockCollision();
+        //left wall
+        for (int iterator = 0;iterator < b.length; iterator++){
+            if (tempB[iterator].x < Panel.left_x) {
+                sxCollision = true;
+            }
+        }
+        //right wall
+        for (int iterator = 0;iterator < b.length; iterator++){
+            if (tempB[iterator].x+Block.size > Panel.right_x) {
+                dxCollision = true;
+            }
+        }
+        //bottom wall
+        for(int iterator = 0;iterator < b.length; iterator++){
+            if (tempB[iterator].y+Block.size > Panel.bottom_y) {
+                bottomCollision = true;
+            }
+        }
+
+
+
+
+    }
+    private void checkStaticBlockCollision(){
+        for(int cnt=0;cnt <Panel.staticBlocks.size();cnt++){
+            int tX=Panel.staticBlocks.get(cnt).x;
+            int tY=Panel.staticBlocks.get(cnt).y;
+            //check down
+            for(int i=0;i<b.length;i++){
+                if(b[i].x==tX && b[i].y+Block.size==tY){
+
+                    bottomCollision=true;
+                }
+            }
+            //check left
+            for(int i=0;i<b.length;i++){
+                if(b[i].x-Block.size==tX && b[i].y==tY){
+                    sxCollision=true;
+                }
+            }
+            //check right
+            for(int i=0;i<b.length;i++){
+                if(b[i].x+Block.size==tX && b[i].y==tY){
+                    dxCollision=true;
+                }
+            }
+
+        }
+    }
     public void update(){
        if (InputHandler.upPressed){
            switch (direction){
@@ -64,37 +154,54 @@ public class Tetris {
            InputHandler.upPressed=false;
 
        }
+       //check if tetris collision wall
+       checkMovementCollision();
        if(InputHandler.downPressed) {
-           b[0].y += Block.size;
-           b[1].y += Block.size;
-           b[2].y += Block.size;
-           b[3].y += Block.size;
-           autoDropCounter =0;
+           if(bottomCollision==false){
+               b[0].y += Block.size;
+               b[1].y += Block.size;
+               b[2].y += Block.size;
+               b[3].y += Block.size;
+               autoDropCounter =0;
+           }
+
            InputHandler.downPressed=false;
        }
        if (InputHandler.leftPressed) {
-           b[0].x -= Block.size;
-           b[1].x -= Block.size;
-           b[2].x -= Block.size;
-           b[3].x -= Block.size;
+           if(sxCollision==false){
+               b[0].x -= Block.size;
+               b[1].x -= Block.size;
+               b[2].x -= Block.size;
+               b[3].x -= Block.size;
+
+           }
+
            InputHandler.leftPressed=false;
        }
        if (InputHandler.rightPressed) {
-           b[0].x += Block.size;
-           b[1].x += Block.size;
-           b[2].x += Block.size;
-           b[3].x += Block.size;
+           if(dxCollision==false){
+               b[0].x += Block.size;
+               b[1].x += Block.size;
+               b[2].x += Block.size;
+               b[3].x += Block.size;
+
+           }
+
            InputHandler.rightPressed=false;
        }
-        autoDropCounter++;
-        if(autoDropCounter ==dropInterval){
-            b[0].y+= Block.size;
-            b[1].y+= Block.size;
-            b[2].y+= Block.size;
-            b[3].y+= Block.size;
-            autoDropCounter =0;
+       if(bottomCollision){
+           active=false;
+       }else {
+           autoDropCounter++;
+           if (autoDropCounter == dropInterval) {
+               b[0].y += Block.size;
+               b[1].y += Block.size;
+               b[2].y += Block.size;
+               b[3].y += Block.size;
+               autoDropCounter = 0;
 
-        }
+           }
+       }
     }
     public void draw(Graphics2D g2){
         int m=2;

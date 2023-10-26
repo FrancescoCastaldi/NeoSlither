@@ -9,6 +9,7 @@ public class InputHandler implements KeyListener {
     public static boolean rightPressed;
     public static boolean upPressed;
     public static boolean downPressed;
+    public static boolean pausePressed;
 
     public boolean anyKeyPressed;
 
@@ -35,6 +36,12 @@ public class InputHandler implements KeyListener {
         // A key is being pressed.
         if (code != KeyEvent.VK_UNDEFINED){
             anyKeyPressed = true;
+        }
+        if(code == KeyEvent.VK_SPACE){
+            if(pausePressed)
+                pausePressed = false;
+            pausePressed = true;
+
         }
     }
 

@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4648d87-4742-42ab-837e-043fe6c04c8a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/InputHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/L2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Bar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Bar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/T.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/T.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Z1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Z1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Z2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Z2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
