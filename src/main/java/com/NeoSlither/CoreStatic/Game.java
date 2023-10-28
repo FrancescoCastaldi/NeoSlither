@@ -1,4 +1,5 @@
 package com.NeoSlither.CoreStatic;
+import com.NeoSlither.Utilities.Effects;
 import com.NeoSlither.Utilities.GameSettings;
 import com.NeoSlither.Core.UI.Panel;
 import javax.swing.JFrame;
@@ -10,6 +11,8 @@ import javax.swing.JPanel;
 public class Game extends JPanel implements Runnable {
     public static final int width = 1280;
     public static final int height = 720;
+
+    public Effects music = new Effects();
 
     Thread gameThread;
     Panel gamePanel;
@@ -28,6 +31,9 @@ public class Game extends JPanel implements Runnable {
 
         gameThread = new Thread(this);
         gameThread.start();
+
+        music.play(0,true);
+        music.loop();
     }
 
 
@@ -49,7 +55,7 @@ public class Game extends JPanel implements Runnable {
 
     }
     private void update(){
-        if(InputHandler.pausePressed==false)
+        if(InputHandler.pausePressed==false && Panel.gameOver==false)
             gamePanel.update();
 
 

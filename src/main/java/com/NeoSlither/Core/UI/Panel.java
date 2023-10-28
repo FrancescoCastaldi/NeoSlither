@@ -20,6 +20,8 @@ public class Panel {
     public static int bottom_y;
     public static int w = 360;
     public static int h = 600;
+    public static boolean gameOver;
+
 
     Tetris currentTetris;
     final int TETRIS_START_X;
@@ -29,6 +31,17 @@ public class Panel {
     final int NEXTETRIS_Y;
     public static ArrayList<Block> staticBlocks=new ArrayList<>();
     public static int dropInterval=60; // 60 fps
+
+
+    //scores results and level
+
+    int level=1;
+    int score;
+    int line=0;
+
+
+
+
     public Panel(){
 
         left_x= (Game.width/2)- (w/2);
@@ -84,16 +97,85 @@ public class Panel {
           staticBlocks.add(currentTetris.b[2]);
           staticBlocks.add(currentTetris.b[3]);
 
+          //check gameover
+          /*
+           * Checks if the current tetris piece is at the starting position.
+           * If it is, sets the game over flag to true.
+           */
+          if(currentTetris.b[0].x==TETRIS_START_X && currentTetris.b[0].y==TETRIS_START_Y){
+              gameOver=true;
+          }
+
+
+          currentTetris.off=false;
+
 
           //replace currentTetris with nextTetris
           currentTetris = nextTetris;
           currentTetris.setXY(TETRIS_START_X,TETRIS_START_Y);
           nextTetris=randomTetris();
           nextTetris.setXY(NEXTETRIS_X,NEXTETRIS_Y);
+          checkDelete();
 
       }else {
           currentTetris.update();
       }
+    }
+
+    private void checkDelete(){
+            int x=left_x;
+            int y=top_y;
+            int blockcnt=0;
+            int lcnt=0;
+            while(x<right_x&& y < bottom_y){
+                for(int i =0;i<staticBlocks.size();i++){
+                    if(staticBlocks.get(i).x==x && staticBlocks.get(i).y==y){
+                        blockcnt++;
+                    }
+                }
+                x+=Block.size;
+                if(x==right_x){
+                    //if blockcnt is 12 then delete lines
+                    if(blockcnt==12){
+                        for(int i= staticBlocks.size()-1;i>-1;i--){
+                            if(staticBlocks.get(i).y==y){
+                                staticBlocks.remove(i);
+                            }
+                        }
+                        lcnt++;
+
+                        line++;
+
+                        //when hit a certain score number, increase speed
+                        if(line % 10 == 0 && dropInterval >1){
+                            level++;
+                            if(dropInterval>10){
+                                dropInterval-=10;
+                            }
+                            else{
+                                dropInterval--;
+                            }
+                        }
+
+                        for(int i=0;i<staticBlocks.size();i++){
+                            if(staticBlocks.get(i).y<y){
+                                staticBlocks.get(i).y+=Block.size;
+                            }
+                        }
+
+                    }
+
+                    blockcnt=0;
+                    y+=Block.size;
+                    x=left_x;
+
+                }
+
+            }
+            if(lcnt>0){
+                int slscore=level*10;
+                score+=slscore*lcnt;
+            }
     }
     public void draw(Graphics2D g2) {
 
@@ -108,6 +190,14 @@ public class Panel {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.drawString("NEXT", x + 60, y + 60);
 
+
+        g2.drawRect(x,top_y+25,225,175);
+
+        x+=40;
+        y=top_y+90;
+        g2.drawString("Level "+level, x , y ); y+=70;
+        g2.drawString("Score "  + score, x , y );
+
         if (currentTetris != null) {
             currentTetris.draw(g2);
         }
@@ -117,11 +207,16 @@ public class Panel {
         }
 
             g2.setColor(Color.white);
-            g2.setFont(new Font("Times New Roman", Font.BOLD, 50));
+            g2.setFont(g2.getFont().deriveFont(150f));
+            if(gameOver){
+                x=left_x ;
+                y=top_y + 320;
+                g2.drawString("Game Over", x, y);
+            }
             if(InputHandler.pausePressed) {
 
 
-                x = left_x + 70;
+                x = left_x ;
                 y = top_y + 320;
                 g2.drawString("Paused", x, y);
             }

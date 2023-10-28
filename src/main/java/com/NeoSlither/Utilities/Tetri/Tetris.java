@@ -17,6 +17,8 @@ public class Tetris {
     boolean dxCollision;
     boolean bottomCollision;
     public boolean active=true;
+    public boolean off;
+    int offCnt=0;
 
 
     public void create(Color c){
@@ -144,6 +146,9 @@ public class Tetris {
         }
     }
     public void update(){
+        if(off){
+            off();
+        }
        if (InputHandler.upPressed){
            switch (direction){
                case 1: getDirection2();break;
@@ -190,7 +195,7 @@ public class Tetris {
            InputHandler.rightPressed=false;
        }
        if(bottomCollision){
-           active=false;
+           off=true;
        }else {
            autoDropCounter++;
            if (autoDropCounter == dropInterval) {
@@ -203,6 +208,19 @@ public class Tetris {
            }
        }
     }
+
+    private void off() {
+        offCnt++;
+        //wait 45 frames until off
+        if(offCnt==45){
+            offCnt=0;
+            checkMovementCollision(); //then check if bottom still hitting
+        }
+        if(bottomCollision){ //if still hitting, so turn off tetris
+            active=false;
+        }
+    }
+
     public void draw(Graphics2D g2){
         int m=2;
         g2.setColor(b[0].c);
