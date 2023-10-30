@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e4648d87-4742-42ab-837e-043fe6c04c8a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Ambient-chill-Calm-Relax-background-music-for-videos-royalty-free-Audio-No-Copyrights-Music.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Ambient-chill-Calm-Relax-background-music-for-videos-royalty-free-Audio-No-Copyrights-Music.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/tetris-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/tetris-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Core/UI/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/CoreStatic/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Effects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Effects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/NeoSlither/Utilities/Tetri/Tetris.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +72,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/FrancescoCastaldi/IdeaProjects/NeoSlither/Resource",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,6 +83,9 @@
       <recent name="C:\Users\FrancescoCastaldi\IdeaProjects\NeoSlither\Resource" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\FrancescoCastaldi\IdeaProjects\NeoSlither\src\main\java\com\NeoSlither\Utilities" />
+      <recent name="C:\Users\FrancescoCastaldi\IdeaProjects\NeoSlither\assets" />
+      <recent name="C:\Users\FrancescoCastaldi\IdeaProjects\NeoSlither" />
       <recent name="C:\Users\FrancescoCastaldi\IdeaProjects\NeoSlither\src" />
       <recent name="C:\Users\FrancescoCastaldi\IdeaProjects\NeoSlither\Resource" />
     </key>

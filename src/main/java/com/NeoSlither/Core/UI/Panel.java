@@ -3,6 +3,7 @@ import com.NeoSlither.CoreStatic.Game;
 import com.NeoSlither.CoreStatic.InputHandler;
 import com.NeoSlither.Utilities.Tetri.*;
 
+import javax.swing.*;
 import javax.swing.text.html.BlockView;
 import java.awt.Graphics2D;
 
@@ -11,7 +12,7 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Panel {
+public class Panel  {
 
     public static int left_x;
     public static int right_x;
@@ -31,6 +32,8 @@ public class Panel {
     final int NEXTETRIS_Y;
     public static ArrayList<Block> staticBlocks=new ArrayList<>();
     public static int dropInterval=60; // 60 fps
+
+
 
 
     //scores results and level
@@ -198,6 +201,16 @@ public class Panel {
         g2.drawString("Level "+level, x , y ); y+=70;
         g2.drawString("Score "  + score, x , y );
 
+        //draw tetris logo
+        // code for drawing the tetris logo goes here
+        // Example code for drawing a tetris logo:
+        String imagePath = "assets/tetris-logo.png";
+        ImageIcon icon = new ImageIcon(imagePath);
+        Image image=icon.getImage();
+        g2.drawImage(image,left_x-360,top_y+100,300,300,null);
+
+
+
         if (currentTetris != null) {
             currentTetris.draw(g2);
         }
@@ -224,4 +237,5 @@ public class Panel {
 
 
     }
+
 }

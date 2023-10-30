@@ -4,13 +4,19 @@ import com.NeoSlither.CoreStatic.InputHandler;
 
 import java.awt.Color;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
 import static com.NeoSlither.Core.UI.Panel.dropInterval;
 import  com.NeoSlither.Core.UI.Panel;
+
+import javax.imageio.ImageIO;
 
 
 public class Tetris {
     public Block b[]=new Block[4];
     public Block tempB[]=new Block[4];
+    public Image image;
     int autoDropCounter =0;
     public int direction=1; //4 directions
     boolean sxCollision;
@@ -20,6 +26,12 @@ public class Tetris {
     public boolean off;
     int offCnt=0;
 
+    public Image getImage() throws IOException {
+        File imageFile = new File("Resource/Ambient-chill-Calm-Relax-background-music-for-videos-royalty-free-Audio-No-Copyrights-Music.wav");
+        image = ImageIO.read(imageFile);
+
+        return image;
+    }
 
     public void create(Color c){
         b[0]=new Block(c);
