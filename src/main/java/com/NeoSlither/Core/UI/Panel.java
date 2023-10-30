@@ -11,6 +11,10 @@ import java.awt.*;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import static com.NeoSlither.CoreStatic.Game.audio;
 
 public class Panel  {
 
@@ -221,17 +225,29 @@ public class Panel  {
 
             g2.setColor(Color.white);
             g2.setFont(g2.getFont().deriveFont(150f));
-            if(gameOver){
+            //autoexit game after 10000ms
+            if(gameOver) {
                 x=left_x ;
                 y=top_y + 320;
                 g2.drawString("Game Over", x, y);
+                Timer timer=new Timer();
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+
+                            System.exit(0);
+
+                    }
+                },10000);
+
             }
             if(InputHandler.pausePressed) {
-
 
                 x = left_x ;
                 y = top_y + 320;
                 g2.drawString("Paused", x, y);
+
+
             }
 
 

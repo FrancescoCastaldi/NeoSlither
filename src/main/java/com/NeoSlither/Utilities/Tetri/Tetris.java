@@ -26,12 +26,7 @@ public class Tetris {
     public boolean off;
     int offCnt=0;
 
-    public Image getImage() throws IOException {
-        File imageFile = new File("Resource/Ambient-chill-Calm-Relax-background-music-for-videos-royalty-free-Audio-No-Copyrights-Music.wav");
-        image = ImageIO.read(imageFile);
 
-        return image;
-    }
 
     public void create(Color c){
         b[0]=new Block(c);
