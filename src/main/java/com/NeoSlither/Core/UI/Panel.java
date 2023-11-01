@@ -229,7 +229,7 @@ public class Panel  {
             if(gameOver) {
                 x=left_x ;
                 y=top_y + 320;
-                g2.drawString("Game Over", x, y);
+                g2.drawString("Game Over", x-230, y);
                 Timer timer=new Timer();
                 timer.schedule(new TimerTask() {
                     @Override
@@ -245,7 +245,7 @@ public class Panel  {
 
                 x = left_x ;
                 y = top_y + 320;
-                g2.drawString("Paused", x, y);
+                g2.drawString("Paused", x-80, y);
 
 
             }
