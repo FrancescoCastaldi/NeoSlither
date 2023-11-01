@@ -139,7 +139,7 @@ public class Tetris {
             }
             //check left
             for(int i=0;i<b.length;i++){
-                if(b[i].x-Block.size==tX && b[i].y==tY){
+                if(b[i].x+Block.size==tX && b[i].y==tY){
                     sxCollision=true;
                 }
             }

@@ -7,9 +7,12 @@ import java.awt.Graphics;
 import com.NeoSlither.Core.UI.Panel;
 import com.NeoSlither.Utilities.LoopingAudio;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 
 public class Game extends JPanel implements Runnable {
@@ -20,14 +23,14 @@ public class Game extends JPanel implements Runnable {
 
     Thread gameThread;
     Panel gamePanel;
-
+    GameSettings gs = new GameSettings();
 
 
 
 
     public  Game(){
         this.setPreferredSize(new Dimension(width,height));
-        this.setBackground(Color.black);
+        this.setBackground(Color.BLACK);
         this.setLayout(null);
         this.addKeyListener(new InputHandler());
         this.setFocusable(true);
@@ -76,6 +79,7 @@ public class Game extends JPanel implements Runnable {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        g2.drawImage(gs.imge, 0, 0,1280,720, null);
         gamePanel.draw(g2);
     }
 }

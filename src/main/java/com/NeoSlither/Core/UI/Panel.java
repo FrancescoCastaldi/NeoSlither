@@ -160,7 +160,7 @@ public class Panel  {
                                 dropInterval-=10;
                             }
                             else{
-                                dropInterval--;
+                                dropInterval-=1;
                             }
                         }
 
