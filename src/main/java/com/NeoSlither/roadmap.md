@@ -12,13 +12,8 @@ _Roadmap from the top, to the bottom._
 - [x] JFrame class
 - [x] FPS
 - [x] `paintComponent` method to draw something
-- [ ] Collision detection
-- [ ] Object placement
-- [ ] Object interaction
-- [ ] Sound
-- [ ] State machine
-- [ ] Scenes
-    - [ ] Main menu
-    - [ ] Option menu
-    - [ ] Quit game menu
-    - [ ] TEST
+- [X] Collision detection
+- [X] Object placement
+- [X] Object interaction
+- [X] Sound
+
