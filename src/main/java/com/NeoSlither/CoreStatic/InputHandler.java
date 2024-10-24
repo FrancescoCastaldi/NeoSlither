@@ -10,6 +10,7 @@ public class InputHandler implements KeyListener {
     public static boolean upPressed;
     public static boolean downPressed;
     public static boolean pausePressed;
+    public static boolean spacePressed;
 
     public boolean anyKeyPressed;
 
@@ -37,12 +38,12 @@ public class InputHandler implements KeyListener {
         if (code != KeyEvent.VK_UNDEFINED){
             anyKeyPressed = true;
         }
-        if(code == KeyEvent.VK_SPACE){
-            if(pausePressed)
-                pausePressed = false;
-            pausePressed = true;
-
+        if (code == KeyEvent.VK_SPACE) {
+            pausePressed = !pausePressed;
+            spacePressed = true;
         }
+
+
     }
 
     @Override public void keyReleased (KeyEvent e){
